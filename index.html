@@ -1,0 +1,1036 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano Tuition South Kensington (SW7) | Anna de Basaldúa</title>
+    <meta name="description" content="Piano lessons for children and adults in South Kensington. Exam prep (ABRSM/Trinity), competitions and performance coaching. Lessons on a Yamaha grand. Book a trial.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --ebony: #0B0B0B;
+            --ivory: #FAFAF7;
+            --gold: #C9A227;
+            --slate: #6B7280;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--ebony);
+            background: var(--ivory);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        
+        /* Header */
+        header {
+            background: rgba(250, 250, 247, 0.98);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(201, 162, 39, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--ebony);
+            text-decoration: none;
+            position: relative;
+            padding-bottom: 4px;
+        }
+        
+        .logo::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--gold);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--ebony);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, var(--ivory) 0%, #f5f5f0 100%);
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1rem;
+            color: var(--ebony);
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            color: var(--slate);
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+        
+        .hero-proof {
+            font-size: 1rem;
+            color: var(--slate);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+            border: 2px solid transparent;
+        }
+        
+        .btn-primary {
+            background: var(--gold);
+            color: white;
+            border-color: var(--gold);
+        }
+        
+        .btn-primary:hover {
+            background: #b59020;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(201, 162, 39, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--ebony);
+            border-color: var(--ebony);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--ebony);
+            color: var(--ivory);
+        }
+        
+        /* Section Styles */
+        section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+        
+        section h2 {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        
+        /* Highlights Grid */
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .highlight-card {
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .highlight-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+        
+        .highlight-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--gold);
+        }
+        
+        .highlight-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            color: var(--ebony);
+        }
+        
+        .highlight-card p {
+            color: var(--slate);
+            line-height: 1.6;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background: white;
+            padding: 5rem 2rem;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .testimonial {
+            padding: 2rem;
+            background: var(--ivory);
+            border-radius: 8px;
+            border-left: 4px solid var(--gold);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            line-height: 1.7;
+            color: var(--ebony);
+        }
+        
+        .testimonial-author {
+            color: var(--slate);
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: start;
+        }
+        
+        .about-image {
+            width: 100%;
+            aspect-ratio: 3/4;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 533"><rect fill="%23C9A227" width="400" height="533"/></svg>');
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .about-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--ebony);
+        }
+        
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--slate);
+        }
+        
+        .about-text ul {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-text li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.75rem;
+            color: var(--slate);
+        }
+        
+        .about-text li::before {
+            content: '♪';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-size: 1.2rem;
+        }
+        
+        /* Lessons Section */
+        .lessons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+        }
+        
+        .lesson-block h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--ebony);
+        }
+        
+        .lesson-block p, .lesson-block ul {
+            color: var(--slate);
+            margin-bottom: 1rem;
+        }
+        
+        .lesson-block ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .lesson-block li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+        
+        .lesson-block li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: bold;
+        }
+        
+        /* Studio Section */
+        .studio {
+            background: white;
+            padding: 5rem 2rem;
+        }
+        
+        .studio-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .studio-image {
+            width: 100%;
+            height: 400px;
+            border-radius: 8px;
+            margin: 2rem 0;
+            overflow: hidden;
+        }
+        
+        .studio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .studio-content p {
+            color: var(--slate);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        /* FAQs */
+        .faq-item {
+            background: white;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .faq-question {
+            width: 100%;
+            padding: 1.5rem;
+            background: none;
+            border: none;
+            text-align: left;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--ebony);
+            transition: background 0.3s;
+        }
+        
+        .faq-question:hover {
+            background: rgba(201, 162, 39, 0.05);
+        }
+        
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s, padding 0.3s;
+            color: var(--slate);
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding: 0 1.5rem 1.5rem;
+        }
+        
+        .faq-icon {
+            transition: transform 0.3s;
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: var(--ebony);
+            color: var(--ivory);
+            padding: 5rem 2rem;
+        }
+        
+        .contact h2 {
+            color: var(--ivory);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .contact-info h3 {
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-item {
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-item strong {
+            color: var(--gold);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-item a {
+            color: var(--ivory);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-item a:hover {
+            color: var(--gold);
+        }
+        
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(250, 250, 247, 0.3);
+            background: rgba(250, 250, 247, 0.1);
+            color: var(--ivory);
+            border-radius: 4px;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .contact-form select {
+            background: rgba(250, 250, 247, 0.15);
+        }
+        
+        .contact-form select option {
+            background: var(--ebony);
+            color: var(--ivory);
+        }
+        
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: rgba(250, 250, 247, 0.5);
+        }
+        
+        .contact-form textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: start;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            margin: 0.3rem 0 0 0;
+        }
+        
+        .checkbox-group label {
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--ebony);
+            color: var(--slate);
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(201, 162, 39, 0.2);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .about-content,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero {
+                min-height: 60vh;
+            }
+            
+            section {
+                padding: 3rem 1.5rem;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="lang-switch" role="navigation" aria-label="Language selector">
+  <button class="lang-btn" data-lang="en" aria-pressed="false" title="English">🇬🇧 EN</button>
+  <button class="lang-btn" data-lang="es" aria-pressed="false" title="Español">🇪🇸 ES</button>
+  <button class="lang-btn" data-lang="fr" aria-pressed="false" title="Français">🇫🇷 FR</button>
+  <button class="lang-btn" data-lang="it" aria-pressed="false" title="Italiano">🇮🇹 IT</button>
+</div>
+<style>
+  body{padding-bottom:80px}
+  @media (max-width:640px){body{padding-bottom:100px}}
+  .lang-switch{
+    position:fixed; bottom:16px; right:16px; z-index:9998;
+    background:rgba(255,255,255,.95); backdrop-filter:saturate(140%) blur(6px);
+    border:1px solid #e5e7eb; border-radius:999px; padding:6px 8px;
+    font:13px/1 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,'Helvetica Neue',Arial;
+    box-shadow:0 4px 14px rgba(0,0,0,.1)
+  }
+  .lang-btn{background:none;border:0;margin:0 4px;padding:6px 8px;cursor:pointer}
+  .lang-btn[aria-pressed="true"]{font-weight:700;text-decoration:underline}
+</style>
+
+
+    <header>
+        <nav>
+            <a href="#" class="logo">Anna de Basaldúa, MMus Perf, BMus (Hons)</a>
+            <ul class="nav-links">
+                <li><a href="#lessons">Lessons</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Piano Tuition in South Kensington</h1>
+            <p class="hero-subtitle">Children (4+) & adults · Beginners to Diploma level · Exam prep & performance coaching</p>
+            <p class="hero-proof">Over 30 years teaching and concert experience · Lessons on a Yamaha grand</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Book a trial lesson</a>
+                <a href="#contact" class="btn btn-secondary">Ask a question</a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Why choose Anna?</h2>
+        <div class="highlights-grid">
+            <div class="highlight-card">
+                <div class="highlight-icon">🎼</div>
+                <h3>Exam Excellence</h3>
+                <p>ABRSM & Trinity exam preparation, competitions, and recitals with proven results</p>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-icon">🎹</div>
+                <h3>Bespoke Approach</h3>
+                <p>Tailored lessons that build technique and musicality at your own pace</p>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-icon">🎓</div>
+                <h3>Inclusive Teaching</h3>
+                <p>Supportive of special educational needs; uses proven learning strategies</p>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-icon">📍</div>
+                <h3>Premium Studio</h3>
+                <p>Lessons at Queen’s Gate, SW7 (quiet studio, Yamaha grand). Online on request</p>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-icon">🌍</div>
+                <h3>Multilingual</h3>
+                <p>Teaching in English, Spanish, French and Italian</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2>What students say</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial">
+                <p class="testimonial-text">"An excellent teacher… our son progresses week by week and looks forward to lessons."</p>
+                <p class="testimonial-author">— Svetlana G., parent</p>
+            </div>
+            <div class="testimonial">
+                <p class="testimonial-text">"Anna shows how to improve—technique and musical expression—not just the right notes."</p>
+                <p class="testimonial-author">— Hoa N., parent</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Anna</h2>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="images/anna4.png" alt="Anna de Basaldúa, piano teacher in South Kensington" loading="lazy">
+            </div>
+            <div class="about-text">
+                <p>Anna de Basaldúa, MMus Perf, BMus (Hons) was born in Bilbao where she obtained a Piano Teaching Diploma with first class honours at the Music Conservatoire. Still a teenager, she studied with Guido Agosti in Rome and later with Pierre Sancan in Paris, where she also attended the École Normale de Musique Alfred Cortot. Her mentor in Moscow was E.G. Ginsburg. Anna has a Masters and Bachelor of Music (Hons) degree from the University of West London, where she gained the Raphael Terroni Piano Prize.</p>
+                
+                <h3>Selected highlights</h3>
+                <ul>
+                    <li>Taught at the Conservatoire de Courbevoie (Paris) and various music schools in Paris and in Spain, as well as in adult education and in a school in London.</li>
+                    <li>Performed at the Castello Sforzesco, part of the Milan Expo 2015, Festival di Arenzano, Salle Ravel in Paris, Festival du Pays de Caux in Normandy, Sociedad Filarmónica in Bilbao, Fundación March and the Sociedad del Real Ateneo in Madrid.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="lessons">
+        <h2>Lessons & Approach</h2>
+        <div class="lessons-grid">
+            <div class="lesson-block">
+                <h3>Who I teach</h3>
+                <p>Children aged 4+, preparing for exams, adult beginners/returners, and advanced students (including Diploma level).</p>
+                
+                <h3>How lessons work</h3>
+                <ul>
+                    <li>Fundamentals: relaxed posture, sound production, technique (scales/arpeggios/etudes)</li>
+                    <li>Musical understanding: style, phrasing, harmony; duet playing to build listening</li>
+                    <li>Performance: mock exams, concerts, confidence and stagecraft</li>
+                </ul>
+            </div>
+            
+            <div class="lesson-block">
+                <h3>Exam prep</h3>
+                <p>ABRSM/Trinity grades and Diplomas. Competition coaching where appropriate.</p>
+                
+                <h3>Special educational needs</h3>
+                <p>Experience with autistic learners (esp. Asperger's). Calm, structured lessons; incremental goals; positive reinforcement.</p>
+                
+                <h3>Lesson format</h3>
+                <p>50 minutes. Weekly sessions in term time. Studio in SW7; online available on request.</p>
+                <p><strong style="color: var(--gold);">Rates:</strong> On enquiry.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="studio">
+        <div class="studio-content">
+            <h2>Studio & Location</h2>
+            <p>Lessons take place in a quiet studio at <strong>11 Queen's Gate, South Kensington (SW7)</strong> on a <strong>Yamaha grand piano</strong>. Easy access from Gloucester Road and South Kensington stations.</p>
+            <div class="studio-image">
+                <img src="images/studio2.png" alt="Piano teaching studio in South Kensington with Yamaha grand" loading="lazy">
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.6826537359687!2d-0.18287768422847677!3d51.49920397963357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760542e39a5b7f%3A0x5f7a8e9c6e8d2e1a!2s11%20Queen&#39;s%20Gate%2C%20London%20SW7%205EL!5e0!3m2!1sen!2suk!4v1234567890123!5m2!1sen!2suk" width="100%" height="350" style="border:0; border-radius: 8px; margin-top: 2rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <section>
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question">
+                    What ages do you teach?
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>From age 4 through adults.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    Do you teach beginners?
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes—beginners to advanced, including Diploma level.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    Do you prepare for exams?
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes—from ABRSM Prep to Trinity ATCL Recital Diploma.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    Do you offer online lessons?
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, by arrangement.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    Do we need a piano at home?
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>An upright piano is ideal; a weighted-key digital is acceptable for starters.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    How do I start?
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>You can book a trial lesson using the form below or contact me directly via email or WhatsApp.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Get in touch</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Enquiries & trial lessons</h3>
+                <div class="contact-item">
+                    <strong>Email</strong>
+                    <a href="mailto:AnnaBasalduaPiano@gmail.com">AnnaBasalduaPiano@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <strong>WhatsApp (preferred)</strong>
+                    <a href="https://wa.me/447865847771">+44 7865 847771</a>
+                </div>
+                <div class="contact-item">
+                    <strong>Location</strong>
+                    <a href="https://maps.app.goo.gl/oae6Htm3X2vhDwZu5" target="_blank">11 Queen's Gate, South Kensington, SW7</a>
+                </div>
+                <div class="contact-item" style="margin-top: 2rem;">
+                    <strong>Follow</strong>
+                    <div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
+                        <a href="https://x.com/AnnaPianoSW7" target="_blank" style="font-size: 0.9rem;">Twitter/X</a>
+                        <a href="https://www.facebook.com/PianoTuitionSouthKensington" target="_blank" style="font-size: 0.9rem;">Facebook</a>
+                        <a href="https://www.linkedin.com/in/anna-basaldua-lemarchand" target="_blank" style="font-size: 0.9rem;">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            
+            <form class="contact-form" id="contactForm">
+                <input type="hidden" name="access_key" value="797263d9-bc6f-4efd-a222-681148238be2">
+                <input type="hidden" name="subject" value="New Piano Lesson Enquiry">
+                <input type="hidden" name="from_name" value="Anna Piano Website">
+                
+                <input type="text" name="name" placeholder="Your name" required>
+                <input type="email" name="email" placeholder="Email address" required>
+                <select name="student_level" required>
+                    <option value="">Student age/level</option>
+                    <option>Child (4-7 years)</option>
+                    <option>Child (8-12 years)</option>
+                    <option>Teen (13-17 years)</option>
+                    <option>Adult beginner</option>
+                    <option>Adult intermediate/advanced</option>
+                </select>
+                <textarea name="message" placeholder="Tell me about your goals and preferred lesson times" required></textarea>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="consent" name="consent" required>
+                    <label for="consent">I agree to be contacted regarding my enquiry.</label>
+                </div>
+                <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                <button type="submit" class="btn btn-primary">Send enquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Anna de Basaldúa. Piano Tuition in South Kensington, London SW7.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">11 Queen's Gate, London | <a href="mailto:AnnaBasalduaPiano@gmail.com" style="color: var(--gold); text-decoration: none;">AnnaBasalduaPiano@gmail.com</a> | <a href="tel:+447865847771" style="color: var(--gold); text-decoration: none;">+44 7865 847771</a></p>
+    </footer>
+
+    <script>
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                faqItems.forEach(i => i.classList.remove('active'));
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Form submission with Web3Forms
+        const form = document.getElementById('contactForm');
+        
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            
+            // Show loading state
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+            
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: json
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    alert('Thank you for your enquiry! Anna will be in touch shortly.');
+                    form.reset();
+                } else {
+                    console.error('Error:', result);
+                    alert('Something went wrong. Please try emailing AnnaBasalduaPiano@gmail.com or WhatsApp +44 7865 847771 directly.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Something went wrong. Please try emailing AnnaBasalduaPiano@gmail.com or WhatsApp +44 7865 847771 directly.');
+            } finally {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }
+        });
+    </script>
+
+
+<script>
+(function(){
+  const KEY="site_lang_v1";
+  const ORIG=new WeakMap();
+  const T={ "Lessons take place in a quiet studio at 11 Queen's Gate, South Kensington (SW7) on a Yamaha grand piano. Easy access from Gloucester Road and South Kensington stations.":{"es":"Las clases tienen lugar en un estudio tranquilo en 11 Queen's Gate, South Kensington (SW7) con un piano de cola Yamaha. Acceso sencillo desde las estaciones de Gloucester Road y South Kensington.","fr":"Les cours ont lieu dans un studio calme au 11 Queen’s Gate, South Kensington (SW7) sur un piano à queue Yamaha. Accès facile depuis les stations Gloucester Road et South Kensington.","it":"Le lezioni si svolgono in uno studio tranquillo in 11 Queen's Gate, South Kensington (SW7) su un pianoforte a coda Yamaha. Facile accesso dalle stazioni di Gloucester Road e South Kensington."},
+    "Lessons take place in a quiet studio at 11 Queen’s Gate, South Kensington (SW7) on a Yamaha grand piano. Easy access from Gloucester Road and South Kensington stations.":{"es":"Las clases tienen lugar en un estudio tranquilo en 11 Queen’s Gate, South Kensington (SW7) con un piano de cola Yamaha. Acceso sencillo desde las estaciones de Gloucester Road y South Kensington.","fr":"Les cours ont lieu dans un studio calme au 11 Queen’s Gate, South Kensington (SW7) sur un piano à queue Yamaha. Accès facile depuis les stations Gloucester Road et South Kensington.","it":"Le lezioni si svolgono in uno studio tranquillo in 11 Queen’s Gate, South Kensington (SW7) su un pianoforte a coda Yamaha. Facile accesso dalle stazioni di Gloucester Road e South Kensington."},
+    "You can book a trial lesson using the form below or contact me directly via email or WhatsApp.":{"es":"Puedes reservar una clase de prueba con el formulario inferior o contactarme directamente por email o WhatsApp.","fr":"Vous pouvez réserver un cours d’essai via le formulaire ci-dessous ou me contacter directement par e‑mail ou WhatsApp.","it":"Puoi prenotare una lezione di prova con il modulo qui sotto oppure contattarmi direttamente via email o WhatsApp."},
+    "Children (4+) & adults · Beginners to Diploma level · Exam prep & performance coaching":{"es":"Niños (4+) y adultos · De iniciación a nivel Diploma · Preparación de exámenes y coaching de interpretación","fr":"Enfants (4+) et adultes · Débutants à niveau Diplôme · Préparation aux examens et coaching d’interprétation","it":"Bambini (4+) e adulti · Da principianti a livello Diploma · Preparazione esami e coaching di esecuzione"},
+    "Anna shows how to improve—technique and musical expression—not just the right notes.":{"es":"Anna muestra cómo mejorar—la técnica y la expresión musical—no solo tocar las notas correctas.","fr":"Anna montre comment progresser—technique et expression musicale—pas seulement jouer les bonnes notes.","it":"Anna mostra come migliorare—tecnica ed espressione musicale—non soltanto suonare le note giuste."},
+    "An excellent teacher… our son progresses week by week and looks forward to lessons.":{"es":"Una profesora excelente… nuestro hijo progresa semana a semana y espera con ilusión las clases.","fr":"Excellente professeure… notre fils progresse semaine après semaine et attend les cours avec impatience.","it":"Un’insegnante eccellente… nostro figlio migliora di settimana in settimana e non vede l’ora delle lezioni."},
+    "ABRSM & Trinity exam preparation, competitions, and recitals with proven results":{"es":"Preparación de exámenes ABRSM y Trinity, concursos y recitales con resultados probados","fr":"Préparation aux examens ABRSM et Trinity, concours et récitals avec des résultats avérés","it":"Preparazione esami ABRSM e Trinity, concorsi e recital con risultati comprovati"},
+    "An upright piano is ideal; a weighted-key digital is acceptable for starters.":{"es":"Un piano vertical es ideal; un digital con teclas contrapesadas es aceptable para comenzar.","fr":"Un piano droit est idéal ; un numérique à touches lestées convient pour débuter.","it":"Un pianoforte verticale è ideale; un digitale a tasti pesati è accettabile per iniziare."},
+    "Lessons at Queen’s Gate, SW7 (quiet studio, Yamaha grand). Online on request":{"es":"Clases en Queen’s Gate, SW7 (estudio tranquilo, piano de cola Yamaha). Online bajo solicitud","fr":"Cours à Queen’s Gate, SW7 (studio calme, piano à queue Yamaha). En ligne sur demande","it":"Lezioni a Queen’s Gate, SW7 (studio tranquillo, pianoforte a coda Yamaha). Online su richiesta"},
+    "Over 30 years teaching and concert experience · Lessons on a Yamaha grand":{"es":"Más de 30 años de docencia y experiencia en conciertos · Clases en un piano de cola Yamaha","fr":"Plus de 30 ans d’enseignement et d’expérience scénique · Cours sur piano à queue Yamaha","it":"Oltre 30 anni di insegnamento ed esperienza concertistica · Lezioni su pianoforte a coda Yamaha"},
+    "Supportive of special educational needs; uses proven learning strategies":{"es":"Apoyo a necesidades educativas especiales; utiliza estrategias de aprendizaje probadas","fr":"Accompagnement des besoins éducatifs particuliers ; stratégies d’apprentissage éprouvées","it":"Supporto per bisogni educativi speciali; utilizza strategie di apprendimento comprovate"},
+    "Tailored lessons that build technique and musicality at your own pace":{"es":"Clases a medida que desarrollan técnica y musicalidad a tu propio ritmo","fr":"Des cours sur mesure pour développer technique et musicalité à votre rythme","it":"Lezioni su misura per sviluppare tecnica e musicalità al tuo ritmo"},
+    "Easy access from Gloucester Road and South Kensington stations.":{"es":"Acceso sencillo desde las estaciones de Gloucester Road y South Kensington.","fr":"Accès facile depuis les stations Gloucester Road et South Kensington.","it":"Facile accesso dalle stazioni di Gloucester Road e South Kensington."},
+    "Yes—from ABRSM Prep to Trinity ATCL Recital Diploma.":{"es":"Sí—desde ABRSM Prep hasta Trinity ATCL Recital Diploma.","fr":"Oui—de l’ABRSM Prep au Trinity ATCL Recital Diploma.","it":"Sì—dall’ABRSM Prep al Trinity ATCL Recital Diploma."},
+    "Tell me about your goals and preferred lesson times":{"es":"Cuéntame tus objetivos y horarios preferidos","fr":"Parlez‑moi de vos objectifs et de vos disponibilités","it":"Parlami dei tuoi obiettivi e degli orari preferiti"},
+    "Yes—beginners to advanced, including Diploma level.":{"es":"Sí—desde principiantes hasta avanzados, incluido nivel Diploma.","fr":"Oui—du débutant à l’avancé, y compris niveau Diplôme.","it":"Sì—da principianti ad avanzati, incluso livello Diploma."},
+    "Teaching in English, Spanish, French and Italian":{"es":"Clases en inglés, español, francés e italiano","fr":"Cours en anglais, espagnol, français et italien","it":"Lezioni in inglese, spagnolo, francese e italiano"},
+    "I agree to be contacted regarding my enquiry.":{"es":"Acepto ser contactado/a respecto a mi consulta.","fr":"J’accepte d’être contacté·e au sujet de ma demande.","it":"Accetto di essere contattato/a riguardo alla mia richiesta."},
+    "11 Queen's Gate, South Kensington (SW7)":{"es":"11 Queen's Gate, South Kensington (SW7)","fr":"11 Queen’s Gate, South Kensington (SW7)","it":"11 Queen's Gate, South Kensington (SW7)"},
+    "Lessons take place in a quiet studio at":{"es":"Las clases tienen lugar en un estudio tranquilo en","fr":"Les cours ont lieu dans un studio calme au","it":"Le lezioni si svolgono in uno studio tranquillo in"},
+    "Piano Tuition in South Kensington":{"es":"Clases de piano en South Kensington","fr":"Cours de piano à South Kensington","it":"Lezioni di pianoforte a South Kensington"},
+    "Do you offer online lessons?":{"es":"¿Ofreces clases online?","fr":"Proposez-vous des cours en ligne ?","it":"Offri lezioni online?"},
+    "Adult intermediate/advanced":{"es":"Adulto intermedio/avanzado","fr":"Adulte intermédiaire/avancé","it":"Adulto intermedio/avanzato"},
+    "Do we need a piano at home?":{"es":"¿Necesitamos un piano en casa?","fr":"Faut-il un piano à la maison ?","it":"Serve avere un pianoforte a casa?"},
+    "adult intermediate/advanced":{"es":"adulto intermedio/avanzado","fr":"adulte intermédiaire/avancé","it":"adulto intermedio/avanzato"},
+    "Frequently Asked Questions":{"es":"Preguntas frecuentes","fr":"Questions fréquentes","it":"Domande frequenti"},
+    "From age 4 through adults.":{"es":"Desde los 4 años hasta adultos.","fr":"Dès 4 ans jusqu’aux adultes.","it":"Dai 4 anni fino agli adulti."},
+    "Do you prepare for exams?":{"es":"¿Preparas para exámenes?","fr":"Préparez-vous aux examens ?","it":"Prepari per gli esami?"},
+    "Enquiries & trial lessons":{"es":"Consultas y clases de prueba","fr":"Demandes & cours d’essai","it":"Richieste & lezioni di prova"},
+    "Special educational needs":{"es":"Necesidades educativas especiales","fr":"Besoins éducatifs particuliers","it":"Bisogni educativi speciali"},
+    "Do you teach beginners?":{"es":"¿Enseñas a principiantes?","fr":"Enseignez-vous aux débutants ?","it":"Insegni ai principianti?"},
+    "What ages do you teach?":{"es":"¿Qué edades enseñas?","fr":"Quelles tranches d’âge enseignez-vous ?","it":"Quali età insegni?"},
+    "on a Yamaha grand piano":{"es":"en un piano de cola Yamaha","fr":"sur un piano à queue Yamaha","it":"su un pianoforte a coda Yamaha"},
+    "— Svetlana G., parent":{"es":"— Svetlana G., madre","fr":"— Svetlana G., parent","it":"— Svetlana G., genitore"},
+    "WhatsApp (preferred)":{"es":"WhatsApp (preferido)","fr":"WhatsApp (préféré)","it":"WhatsApp (preferito)"},
+    "Yes, by arrangement.":{"es":"Sí, previa coordinación.","fr":"Oui, sur arrangement.","it":"Sì, previo accordo."},
+    "Book a trial lesson":{"es":"Reserva una clase de prueba","fr":"Réserver un cours d’essai","it":"Prenota una lezione di prova"},
+    "Selected highlights":{"es":"Logros destacados","fr":"Faits marquants","it":"Momenti salienti"},
+    "Inclusive Teaching":{"es":"Enseñanza inclusiva","fr":"Pédagogie inclusive","it":"Didattica inclusiva"},
+    "Lessons & Approach":{"es":"Clases y enfoque","fr":"Cours & approche","it":"Lezioni & approccio"},
+    "Rates: On enquiry.":{"es":"Tarifas: A consultar.","fr":"Tarifs : sur demande.","it":"Tariffe: Su richiesta."},
+    "Student age/level":{"es":"Edad/nivel del estudiante","fr":"Âge/niveau de l’élève","it":"Età/livello dello studente"},
+    "Studio & Location":{"es":"Estudio y ubicación","fr":"Studio & localisation","it":"Studio e posizione"},
+    "What students say":{"es":"Lo que dicen los alumnos","fr":"Ce que disent les élèves","it":"Cosa dicono gli studenti"},
+    "Bespoke Approach":{"es":"Enfoque a medida","fr":"Approche personnalisée","it":"Approccio personalizzato"},
+    "How lessons work":{"es":"Cómo funcionan las clases","fr":"Déroulement des cours","it":"Come funzionano le lezioni"},
+    "Why choose Anna?":{"es":"¿Por qué elegir a Anna?","fr":"Pourquoi choisir Anna ?","it":"Perché scegliere Anna?"},
+    "— Hoa N., parent":{"es":"— Hoa N., madre","fr":"— Hoa N., parent","it":"— Hoa N., genitore"},
+    "Exam Excellence":{"es":"Excelencia en exámenes","fr":"Excellence aux examens","it":"Eccellenza negli esami"},
+    "How do I start?":{"es":"¿Cómo empiezo?","fr":"Comment commencer ?","it":"Come inizio?"},
+    "Adult beginner":{"es":"Adulto principiante","fr":"Adulte débutant","it":"Adulto principiante"},
+    "Ask a question":{"es":"Haz una pregunta","fr":"Poser une question","it":"Fai una domanda"},
+    "Premium Studio":{"es":"Estudio de primera","fr":"Studio haut de gamme","it":"Studio di alto livello"},
+    "Email address":{"es":"Dirección de correo","fr":"Votre e‑mail","it":"La tua email"},
+    "Lesson format":{"es":"Formato de las clases","fr":"Format des cours","it":"Formato delle lezioni"},
+    "Get in touch":{"es":"Contacto","fr":"Contact","it":"Contatti"},
+    "Multilingual":{"es":"Multilingüe","fr":"Multilingue","it":"Multilingue"},
+    "Send enquiry":{"es":"Enviar consulta","fr":"Envoyer la demande","it":"Invia richiesta"},
+    "Who I teach":{"es":"A quién enseño","fr":"À qui j’enseigne","it":"A chi insegno"},
+    "About Anna":{"es":"Sobre Anna","fr":"À propos d’Anna","it":"Su Anna"},
+    "Exam prep":{"es":"Preparación de exámenes","fr":"Préparation aux examens","it":"Preparazione esami"},
+    "Your name":{"es":"Tu nombre","fr":"Votre nom","it":"Il tuo nome"},
+    "Children":{"es":"Niños","fr":"Enfants","it":"Bambini"},
+    "Location":{"es":"Ubicación","fr":"Adresse","it":"Indirizzo"},
+    "Contact":{"es":"Contacto","fr":"Contact","it":"Contatti"},
+    "Lessons":{"es":"Clases","fr":"Cours","it":"Lezioni"},
+    "Follow":{"es":"Sígueme","fr":"Suivre","it":"Segui"},
+    "About":{"es":"Acerca de","fr":"À propos","it":"Chi sono"},
+    "Child":{"es":"Niño/a","fr":"Enfant","it":"Bambino/a"},
+    "Email":{"es":"Correo electrónico","fr":"E‑mail","it":"Email"},
+    "Teens":{"es":"Adolescentes","fr":"Adolescents","it":"Adolescenti"},
+    "Teen":{"es":"Adolescentes","fr":"Adolescent","it":"Adolescenti"} };
+  const KEYS=["Lessons take place in a quiet studio at 11 Queen's Gate, South Kensington (SW7) on a Yamaha grand piano. Easy access from Gloucester Road and South Kensington stations.","Lessons take place in a quiet studio at 11 Queen’s Gate, South Kensington (SW7) on a Yamaha grand piano. Easy access from Gloucester Road and South Kensington stations.","You can book a trial lesson using the form below or contact me directly via email or WhatsApp.","Children (4+) & adults · Beginners to Diploma level · Exam prep & performance coaching","Anna shows how to improve—technique and musical expression—not just the right notes.","An excellent teacher… our son progresses week by week and looks forward to lessons.","ABRSM & Trinity exam preparation, competitions, and recitals with proven results","An upright piano is ideal; a weighted-key digital is acceptable for starters.","Lessons at Queen’s Gate, SW7 (quiet studio, Yamaha grand). Online on request","Over 30 years teaching and concert experience · Lessons on a Yamaha grand","Supportive of special educational needs; uses proven learning strategies","Tailored lessons that build technique and musicality at your own pace","Easy access from Gloucester Road and South Kensington stations.","Yes—from ABRSM Prep to Trinity ATCL Recital Diploma.","Tell me about your goals and preferred lesson times","Yes—beginners to advanced, including Diploma level.","Teaching in English, Spanish, French and Italian","I agree to be contacted regarding my enquiry.","11 Queen's Gate, South Kensington (SW7)","Lessons take place in a quiet studio at","Piano Tuition in South Kensington","Do you offer online lessons?","Adult intermediate/advanced","Do we need a piano at home?","adult intermediate/advanced","Frequently Asked Questions","From age 4 through adults.","Do you prepare for exams?","Enquiries & trial lessons","Special educational needs","Do you teach beginners?","What ages do you teach?","on a Yamaha grand piano","— Svetlana G., parent","WhatsApp (preferred)","Yes, by arrangement.","Book a trial lesson","Selected highlights","Inclusive Teaching","Lessons & Approach","Rates: On enquiry.","Student age/level","Studio & Location","What students say","Bespoke Approach","How lessons work","Why choose Anna?","— Hoa N., parent","Exam Excellence","How do I start?","Adult beginner","Ask a question","Premium Studio","Email address","Lesson format","Get in touch","Multilingual","Send enquiry","Who I teach","About Anna","Exam prep","Your name","Children","Location","Contact","Lessons","Follow","About","Child","Email","Teens","Teen"]; // Sorted longest-first
+
+  const ATTR_MAP=[
+    ['input[name="name"]','placeholder',{"Your name":{es:"Tu nombre",fr:"Votre nom",it:"Il tuo nome"}}],
+    ['input[name="email"]','placeholder',{"Email address":{es:"Dirección de correo",fr:"Votre e‑mail",it:"La tua email"}}],
+    ['textarea','placeholder',{"Tell me about your goals and preferred lesson times":{es:"Cuéntame tus objetivos y horarios preferidos",fr:"Parlez‑moi de vos objectifs et de vos disponibilités",it:"Parlami dei tuoi obiettivi e degli orari preferiti"}}],
+  ];
+
+  function walkTextNodes(root){
+    const w=document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {acceptNode(n){
+      if(!n.nodeValue) return NodeFilter.FILTER_REJECT;
+      const t=n.nodeValue.trim(); if(!t) return NodeFilter.FILTER_REJECT;
+      const p=n.parentNode && n.parentNode.nodeName.toLowerCase();
+      if(['script','style','noscript'].includes(p)) return NodeFilter.FILTER_REJECT;
+      return NodeFilter.FILTER_ACCEPT;
+    }});
+    const out=[]; while(w.nextNode()) out.push(w.currentNode); return out;
+  }
+
+  function translateText(base, lang){
+    let out=base;
+    for(const key of KEYS){ // longest-first substring replace
+      const dict=T[key]; if(!dict) continue;
+      const rep=dict[lang]; if(!rep) continue;
+      if(out.includes(key)) out = out.split(key).join(rep);
+    }
+    return out;
+  }
+
+  function applyAttrTranslations(lang){
+    ATTR_MAP.forEach(([sel,attr,dict])=>{
+      const el=document.querySelector(sel);
+      if(!el) return;
+      const orig=el.dataset.origAttr || el.getAttribute(attr) || "";
+      if(!el.dataset.origAttr) el.dataset.origAttr=orig;
+      const m=dict[orig];
+      if(m && m[lang]) el.setAttribute(attr, m[lang]);
+    });
+  }
+
+  function translateDOM(lang){
+    document.documentElement.lang=lang;
+    walkTextNodes(document.body).forEach(n=>{
+      if(!ORIG.has(n)) ORIG.set(n, n.nodeValue);
+      const base=ORIG.get(n);
+      n.nodeValue = translateText(base, lang);
+    });
+    applyAttrTranslations(lang);
+    document.querySelectorAll('.lang-btn').forEach(b=>b.setAttribute('aria-pressed', String(b.dataset.lang===lang)));
+    try{ localStorage.setItem(KEY,lang); }catch(e){}
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('.lang-btn').forEach(btn=>btn.addEventListener('click',()=>translateDOM(btn.dataset.lang)));
+    const saved = (function(){ try{return localStorage.getItem(KEY)||'en';}catch(e){return'en';} })();
+    translateDOM(saved);
+  });
+})();
+</script>
+
+</body>
+</html>
